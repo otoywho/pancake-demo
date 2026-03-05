@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 406: expected 'simple_expression' not found.
-    xalign
-          ^
+File "game/script.rpy", line 40: Only one say menuitem may exist per menu.
+    trr "Customers will give you descriptions on the types of drinks they want!"
+                                                                                ^
 
 Ren'Py Version: Ren'Py 8.5.2.26010301
-Thu Mar  5 17:31:50 2026
+Thu Mar  5 17:55:00 2026

@@ -1,34 +1,20 @@
-2026-03-05 09:28:43 UTC
+2026-03-05 09:54:59 UTC
 Windows-11-10.0.26200-SP0
 Ren'Py 8.5.2.26010301
 
-Early init took 54 ms
-Loading error handling took 110 ms
-Loading script took 1742 ms
-Loading save slot metadata took 72 ms
+Early init took 73 ms
+Loading error handling took 50 ms
+Loading script took 801 ms
+Loading save slot metadata took 18 ms
 Loading persistent took 0 ms
-Running init code took 360 ms
-Loading analysis data took 9 ms
-Analyze and compile ATL took 1 ms
-Reloading save slot metadata took 2 ms
-Backing up script files to 'C:\\Users\\donna\\AppData\\Roaming/RenPy/backups\\pancake demo':
-Dump and make backups took 49 ms
-Cleaning cache took 1 ms
-Making clean stores took 0 ms
-Initial gc took 58 ms
+
+File "game/script.rpy", line 40: Only one say menuitem may exist per menu.
+    trr "Customers will give you descriptions on the types of drinks they want!"
+                                                                                ^
 DPI scale factor: 1.250000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: b"Couldn't load nvlib." (can be ignored)
-Creating interface object took 53 ms
-Init translation took 1 ms
-Cleaning stores took 0 ms
-Load screen analysis took 14 ms
-Analyze screens took 9 ms
-Save screen analysis took 10 ms
-Save pyanalysis took 0 ms
-Save bytecode took 25 ms
-Running _start took 1 ms
-Interface start took 279 ms
+Interface start took 119 ms
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -38,144 +24,36 @@ Vendor: 'Intel'
 Renderer: 'Intel(R) Iris(R) Xe Graphics'
 Version: '4.6.0 - Build 32.0.101.7080'
 Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1738, 978) drawable=(1738, 978)
-Maximum texture size: 4096x4096
-Cleaning stores took 0 ms
-Load screen analysis took 17 ms
-Analyze screens took 0 ms
-Running _start took 0 ms
-Resetting cache.
-Early init took 6 ms
-Loading error handling took 18 ms
-Loading script took 279 ms
-Loading save slot metadata took 10 ms
-Loading persistent took 1 ms
-Running init code took 22 ms
-Loading analysis data took 4 ms
-Analyze and compile ATL took 2 ms
-Reloading save slot metadata took 2 ms
-Backing up script files to 'C:\\Users\\donna\\AppData\\Roaming/RenPy/backups\\pancake demo':
-Dump and make backups took 36 ms
-Cleaning cache took 0 ms
-Making clean stores took 1 ms
-Initial gc took 79 ms
-DPI scale factor: 1.250000
-Creating interface object took 1 ms
-Init translation took 0 ms
-Cleaning stores took 0 ms
-Load screen analysis took 1 ms
-Analyze screens took 11 ms
-Save screen analysis took 14 ms
-Save pyanalysis took 5 ms
-Save bytecode took 2 ms
-Running _start took 1 ms
-Interface start took 220 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Intel'
-Renderer: 'Intel(R) Iris(R) Xe Graphics'
-Version: '4.6.0 - Build 32.0.101.7080'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1738, 977) drawable=(1738, 977)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 5 ms
-Loading error handling took 11 ms
-Loading script took 141 ms
-Loading save slot metadata took 8 ms
-Loading persistent took 0 ms
-
-File "game/screens.rpy", line 405: style statement expects a non-empty block.
-    style main_menu_vbox:
-                         ^
-DPI scale factor: 1.250000
-Interface start took 125 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Intel'
-Renderer: 'Intel(R) Iris(R) Xe Graphics'
-Version: '4.6.0 - Build 32.0.101.7080'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1736, 976) drawable=(1736, 976)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 9 ms
-Loading error handling took 10 ms
-Loading script took 110 ms
-Loading save slot metadata took 6 ms
-Loading persistent took 0 ms
-
-File "game/screens.rpy", line 406: style property x is not known.
-    x
-     ^
-DPI scale factor: 1.250000
-Interface start took 92 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Intel'
-Renderer: 'Intel(R) Iris(R) Xe Graphics'
-Version: '4.6.0 - Build 32.0.101.7080'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1736, 976) drawable=(1736, 976)
+Screen sizes: virtual=(1920, 1080) physical=(1733, 975) drawable=(1733, 975)
 Maximum texture size: 4096x4096
 Resetting cache.
 Early init took 4 ms
-Loading error handling took 10 ms
-Loading script took 141 ms
+Loading error handling took 12 ms
+Loading script took 81 ms
 Loading save slot metadata took 8 ms
-Loading persistent took 0 ms
-
-File "game/screens.rpy", line 406: expected 'simple_expression' not found.
-    xalign
-          ^
-DPI scale factor: 1.250000
-Interface start took 81 ms
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'Intel'
-Renderer: 'Intel(R) Iris(R) Xe Graphics'
-Version: '4.6.0 - Build 32.0.101.7080'
-Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1736, 976) drawable=(1736, 976)
-Maximum texture size: 4096x4096
-Resetting cache.
-Early init took 6 ms
-Loading error handling took 10 ms
-Loading script took 274 ms
-Loading save slot metadata took 12 ms
-Loading persistent took 2 ms
-Running init code took 65 ms
-Loading analysis data took 2 ms
-Analyze and compile ATL took 1 ms
-Reloading save slot metadata took 3 ms
+Loading persistent took 1 ms
+Running init code took 57 ms
+Loading analysis data took 9 ms
+Analyze and compile ATL took 0 ms
+Reloading save slot metadata took 4 ms
 Backing up script files to 'C:\\Users\\donna\\AppData\\Roaming/RenPy/backups\\pancake demo':
-Dump and make backups took 58 ms
+Dump and make backups took 39 ms
 Cleaning cache took 0 ms
 Making clean stores took 0 ms
-Initial gc took 134 ms
+Initial gc took 61 ms
 DPI scale factor: 1.250000
-Creating interface object took 0 ms
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object took 2 ms
 Init translation took 0 ms
 Cleaning stores took 1 ms
-Load screen analysis took 0 ms
-Analyze screens took 35 ms
-Save screen analysis took 18 ms
-Save pyanalysis took 10 ms
-Save bytecode took 3 ms
-Running _start took 1 ms
-Interface start took 369 ms
+Load screen analysis took 2 ms
+Analyze screens took 8 ms
+Save screen analysis took 12 ms
+Save pyanalysis took 0 ms
+Save bytecode took 1 ms
+Running _start took 2 ms
+Interface start took 238 ms
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -185,9 +63,9 @@ Vendor: 'Intel'
 Renderer: 'Intel(R) Iris(R) Xe Graphics'
 Version: '4.6.0 - Build 32.0.101.7080'
 Display Info: <Info({'bitsize': 32, 'bytesize': 4, 'masks': (16711680, 65280, 255, 0), 'shifts': (16, 8, 0, 0), 'losses': (0, 0, 0, 8), 'current_w': 1920, 'current_h': 1080, 'refresh_rate': 60, 'hw': False, 'wm': True, 'video_mem': 268435456, 'blit_hw': False, 'blit_hw_CC': False, 'blit_hw_A': False, 'blit_sw': False, 'blit_sw_CC': False, 'blit_sw_A': False})>
-Screen sizes: virtual=(1920, 1080) physical=(1736, 976) drawable=(1736, 976)
+Screen sizes: virtual=(1920, 1080) physical=(1733, 975) drawable=(1733, 975)
 Maximum texture size: 4096x4096
 Cleaning stores took 0 ms
-Load screen analysis took 22 ms
+Load screen analysis took 15 ms
 Analyze screens took 0 ms
-Running _start took 1 ms
+Running _start took 0 ms

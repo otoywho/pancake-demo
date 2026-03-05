@@ -1,6 +1,7 @@
 #CHARACTER
-define e = Character("Eileen")
-define a = Character("Character A")
+define shn = Character("Shin")
+define trr = Character("Tanriro")
+define ahn = Character("Ahn")
 
 #IMAGE
 
