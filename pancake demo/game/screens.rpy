@@ -363,19 +363,32 @@ screen main_menu():
 
     ## The use statement includes another screen inside this one. The actual
     ## contents of the main menu are in the navigation screen.
-    use navigation
+    vbox:
+        style_prefix "main_menu"
 
-    if gui.show_name:
+        xpos gui.navigation_xpos
+        yalign 0.5
 
-        vbox:
-            style "main_menu_vbox"
+        spacing gui.navigation_spacing
 
-            text "[config.name!t]":
-                style "main_menu_title"
+        textbutton _("Start") action Start()
 
-            text "[config.version]":
-                style "main_menu_version"
+        textbutton _("Load") action ShowMenu("load")
 
+        textbutton _("Preferences") action ShowMenu("preferences")
+
+        textbutton _("About") action ShowMenu("about")
+
+        if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
+
+            ## Help isn't necessary or relevant to mobile devices.
+            textbutton _("Help") action ShowMenu("help")
+
+        if renpy.variant("pc"):
+
+            ## The quit button is banned on iOS and unnecessary on Android and
+            ## Web.
+            textbutton _("Quit") action Quit(confirm=not main_menu)
 
 style main_menu_frame is empty
 style main_menu_vbox is vbox
@@ -390,11 +403,7 @@ style main_menu_frame:
     background "gui/overlay/main_menu.png"
 
 style main_menu_vbox:
-    xalign 1.0
-    xoffset -30
-    xmaximum 1200
-    yalign 1.0
-    yoffset -30
+    xalign 0.0
 
 style main_menu_text:
     properties gui.text_properties("main_menu", accent=True)
