@@ -287,50 +287,62 @@ style quick_button_text:
 ## This screen is included in the main and game menus, and provides navigation
 ## to other menus, and to start the game.
 
+style custom_main_menu_frame is empty
+
 screen navigation():
+    if renpy.get_screen("main_menu"):
+        frame:
+            style "custom_main_menu_frame"
 
-    vbox:
-        style_prefix "navigation"
+            imagebutton action Start():
+                at anim_hover
+                focus_mask im.Scale("gui/button/playbutton.png", width=1920, height=1080)
+                idle im.Scale("gui/button/playbutton.png", width=1920, height=1080)
+                hover im.Scale("gui/button/playbutton_select.png", width=1920, height=1080)
 
-        xpos gui.navigation_xpos
-        yalign 0.5
+            imagebutton action ShowMenu("preferences"):
+                at anim_hover
+                focus_mask im.Scale("gui/button/configbutton.png", width=1920, height=1080)
+                idle im.Scale("gui/button/configbutton.png", width=1920, height=1080)
+                hover im.Scale("gui/button/configbutton_select.png", width=1920, height=1080)
 
-        spacing gui.navigation_spacing
+            imagebutton action Quit(confirm=True):
+                at anim_hover
+                focus_mask im.Scale("gui/button/quitbutton.png", width=1920, height=1080)
+                idle im.Scale("gui/button/quitbutton.png", width=1920, height=1080)
+                hover im.Scale("gui/button/quitbutton_select.png", width=1920, height=1080)
+            
+    else:
+        vbox:
+            style_prefix "navigation"
 
-        if main_menu:
+            xpos gui.navigation_xpos
+            yalign 0.5
 
-            textbutton _("Start") action Start()
-
-        else:
+            spacing gui.navigation_spacing
 
             textbutton _("History") action ShowMenu("history")
-
             textbutton _("Save") action ShowMenu("save")
+            textbutton _("Load") action ShowMenu("load")
+            textbutton _("Preferences") action ShowMenu("preferences")
 
-        textbutton _("Load") action ShowMenu("load")
-
-        textbutton _("Preferences") action ShowMenu("preferences")
-
-        if _in_replay:
-
-            textbutton _("End Replay") action EndReplay(confirm=True)
-
-        elif not main_menu:
+            if _in_replay:
+                textbutton _("End Replay") action EndReplay(confirm=True)
 
             textbutton _("Main Menu") action MainMenu()
 
-        textbutton _("About") action ShowMenu("about")
+            textbutton _("About") action ShowMenu("about")
 
-        if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
+            if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 
-            ## Help isn't necessary or relevant to mobile devices.
-            textbutton _("Help") action ShowMenu("help")
+                ## Help isn't necessary or relevant to mobile devices.
+                textbutton _("Help") action ShowMenu("help")
 
-        if renpy.variant("pc"):
+            if renpy.variant("pc"):
 
-            ## The quit button is banned on iOS and unnecessary on Android and
-            ## Web.
-            textbutton _("Quit") action Quit(confirm=not main_menu)
+                ## The quit button is banned on iOS and unnecessary on Android and
+                ## Web.
+                textbutton _("Quit") action Quit(confirm=True)
 
 
 style navigation_button is gui_button
@@ -358,38 +370,18 @@ screen main_menu():
     add gui.main_menu_background:
         fit "cover"
 
-    ## This empty frame darkens the main menu.
-    frame:
-        style "main_menu_frame"
-
     ## The use statement includes another screen inside this one. The actual
     ## contents of the main menu are in the navigation screen.
-    vbox:
-        style_prefix "main_menu"
+    use navigation
 
-        xpos gui.navigation_xpos
-        yalign 0.5
+    if gui.show_name:
 
-        spacing gui.navigation_spacing
+        vbox:
+            style "main_menu_vbox"
 
-        textbutton _("Start") action Start()
-
-        textbutton _("Load") action ShowMenu("load")
-
-        textbutton _("Preferences") action ShowMenu("preferences")
-
-        textbutton _("About") action ShowMenu("about")
-
-        if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
-
-            ## Help isn't necessary or relevant to mobile devices.
-            textbutton _("Help") action ShowMenu("help")
-
-        if renpy.variant("pc"):
-
-            ## The quit button is banned on iOS and unnecessary on Android and
-            ## Web.
-            textbutton _("Quit") action Quit(confirm=not main_menu)
+            add "logo.png":
+                xsize 520
+                fit "contain"
 
 style main_menu_frame is empty
 style main_menu_vbox is vbox
