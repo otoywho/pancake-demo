@@ -1,6 +1,6 @@
 ﻿label start:
 
-    scene bg_black
+    scene bg_black with dissolve
 
     # TODO: Day 1 Title
     "[[DAY 1]"
@@ -38,10 +38,6 @@
     char_shin "\"What can I get you?\""
     char_tariro "\"I want a warm milky drink that also tastes chocolatey with marshmallows!\""
 
-    jump tutorial_order
-
-    return
-
     # (Tariro TUT order)
 label tutorial_order:
     menu:
@@ -50,21 +46,16 @@ label tutorial_order:
             jump tutorial_continue
 
         "Espresso":
-            jump tutorial_wrong_answer
+            char_tariro "\"Nope, but thankfully this is just a test.\""
+            jump tutorial_order
 
         "Milk":
-            jump tutorial_wrong_answer
+            char_tariro "\"Nope, but thankfully this is just a test.\""
+            jump tutorial_order
 
         "Americanó":
-            jump tutorial_wrong_answer
-
-    return
-
-label tutorial_wrong_answer:
-    char_tariro "\"Nope, but thankfully this is just a test.\""
-    jump tutorial_order
-
-    return
+            char_tariro "\"Nope, but thankfully this is just a test.\""
+            jump tutorial_order
 
 label tutorial_continue:
     char_tariro "\"Just remember to pay attention to what the customers are saying! Good luck!\""
@@ -168,8 +159,247 @@ label tutorial_continue:
     char_monologue "I hope things go well tomorrow. Big plans.. big..plans.."
     "You sleep till the next day."
 
-    return
-
 label start_day_2:
+    scene bg_black with dissolve
+    "[[DAY 2]"
+
+    "You would hear the loud ringing of an alarm."
+    char_monologue "5 more minutes…"
+    "You wait for 5 minutes, and then you get up."
+    "You do your normal daily morning routine before heading off to your shop."
+
+    scene bg_cafe_behind_counter_morning with dissolve #(temporary)
+    "The bell would ring, a customer is here!"
+
+    #Office Worker order
+    "Office Worker" "\"I’m in a hurry!\""
+    char_shin "\"What can I get you?\""
+    "Office Worker" "\"Can I get a chocolate-like drink that can keep me up?\""
+
+label d2_order1:
+    #Random drink tba
+    menu: 
+        "Random Drink":
+            "Office Worker" "\"This isn't what I wanted!!\""
+            "Office Worker" "\"Whatever, I have to go!\""
+        "Dark Chocolate Espresso":
+            "Office Worker" "\"Thanks!\""
+        "Random Drink":
+            "Office Worker" "\"This isn't what I wanted!!\""
+            "Office Worker" "\"Whatever, I have to go!\""
+        "Random Drink":
+            "Office Worker" "\"This isn't what I wanted!!\""
+            "Office Worker" "\"Whatever, I have to go!\""
+
+label d2_continue1:
+    char_shin "\"Couldn’t imagine working in a hectic office again…\""
+    "The bell would ring, a customer is here!"
+
+    #Young Girl order
+    "Young Girl" "\"Hello~! I didn't know if I could order or not!\""
+    char_shin "\"What can I get you?"
+    "Young Girl" "\"I want something cold and caramelly~ haha!\""
+
+label d2_order2:
+    #Random drink tba
+    menu: 
+        "Random Drink":
+            "Young Girl" "\" Not exactly what I wanted, but it doesn't taste half bad..!\""
+        "Random Drink":
+            "Young Girl" "\" Not exactly what I wanted, but it doesn't taste half bad..!\""
+        "Random Drink":
+            "Young Girl" "\" Not exactly what I wanted, but it doesn't taste half bad..!\""
+        "Iced Caramel Cappuccino":
+            "Young Girl" "\"Mmm! Delish! I'll tell my friends about this place!\""
+
+label d2_continue2:
+    char_shin "\"I’ll get better eventually..\""
+    "The bell would ring, a customer is here!"
+
+    #Gamer order
+    "Gamer" "\"I heard this was a new coffee place!\""
+    char_shin "\"What can I get you?\""
+    "Gamer" "\"Could I get something kinda like a black coffee that's kinda like a simple espresso but lighter?\""
+
+label d2_order3:
+    #Random drink tba
+    menu: 
+        "Random Drink":
+            "Gamer" "\"Ugh, it tastes like a loss streak in Val.\""
+        "Random Drink":
+            "Gamer" "\"Ugh, it tastes like a loss streak in Val.\""
+        "Caffé Americanó":
+            "Gamer" "\"Thanks, maybe I'll bring my laptop here for gaming sesh!\""
+        "Random Drink":
+            "Gamer" "\"Ugh, it tastes like a loss streak in Val.\""
+
+label d2_continue3:
+    char_shin "\"Ha, I wish I could play games all day.\""
+    "The bell would ring, a customer is here!"
+
+    #Old Lady order
+    "Old Lady" "\"What a fancy-looking cafe..\""
+    char_shin "\"What can I get you?\""
+    "Old Lady" "\"Hello sweetheart, can I have a tea drink and something spicy and crunchy with it?\""
+
+label d2_order4:
+    #Random drink tba
+    menu: 
+        "Random Drink":
+            "Old Lady" "\"Not quite, but you've done your best.. Here you go.\""
+        "Green Tea with Ginger cookies":
+            "Old Lady" "\"Thank you dear, here's a tip.\""
+        "Random Drink":
+            "Old Lady" "\"Not quite, but you've done your best.. Here you go.\""
+        "Random Drink":
+            "Old Lady" "\"Not quite, but you've done your best.. Here you go.\""
+
+label d2_continue4:
+    char_shin "\"What a sweet lady…\""
+    #Shift over
+    "You take a deep breath."
+    char_shin "\"What a day, time to close up now.\""
+    "You close up shop and headed home.."
+    "On your way home, you noticed a figure."
+    "It was the Young Lady from earlier."
+
+    #Young Lady side convo
+    "Young Lady" "\"Oh hey, you’re that barista from that cafe!\""
+    char_shin "\"Oh hey! What are you doing out here so late?\""
+    "Young Lady" "\"Well, I’m just about to head home, just taking a shortcut!\""
+    char_shin "\"Down there? Looks scary..\""
+    "Young Lady" "\"Scary? I go that way every day! Don’t worry!\""
+    char_shin "\" Well, I guess, be safe!\""
+    "Young Lady" "\"Thanks! Good luck with the Cafe!\""
+    char_shin "\"Thank you!\""
+    "Young Lady" "\"I’ll def come by tomorrow!\""
+    
+    "You wave her goodbye as she disappears into the wooded trail."
+    "With that, you proceed to head home."
+    "You lie on your couch, too tired to head to your bed."
+    "You sleep till the next day."
+
+label start_day_3:
+    scene bg_black with dissolve
+    "[[DAY 3]"
+    "You wake up before your alarm."
+    char_monologue "Just a few more days to go. The goal is looking far but I feel like I can make it through."
+    "You grab your keys and head down to your shop."
+    "You open up shop."
+
+    #Open up 
+    scene bg_cafe_behind_counter_morning with dissolve
+    "The bell would ring, a customer is here!"
+
+    #Edgy Teen order
+    "Edgy Teen" "\"Hey you, the dead have been waiting forever. Can I order now?\""
+    char_shin "\"What can I get you?\""
+    "Edgy Teen" "\"I want something gloomy and green. Got that spooky latte taste..\""
+
+label d3_order1:
+    #Random drink tba
+    menu: 
+        "Mocha Latte":
+            "Edgy Teen" "\"Thanks.\""
+            "Edgy Teen" "\"By the way.. There’s something stalking this place. I like it.\""
+        "Random Drink":
+            "Edgy Teen" "\"What’s this? Whatevs prolly why you’re cursed now..\""
+        "Random Drink":
+            "Edgy Teen" "\"What’s this? Whatevs prolly why you’re cursed now..\""
+        "Random Drink":
+            "Edgy Teen" "\"What’s this? Whatevs prolly why you’re cursed now..\""
+
+label d3_continue1:
+    char_shin "\"I really hope I didn’t get cursed just now…\""
+    "The bell would ring, a customer is here!"
+
+    #Police officer order
+    "Police officer" "\"Good afternoon young man.\""
+    char_shin "\"What can I get you?\""
+    "Police officer" "\"I’d like the usual snack and the warm drink. Yknow wink wink. \""
+
+label d3_order2:
+    #Random drink tba
+    menu: 
+        "Random Drink":
+            "Police officer" "\"What about the donuts? :C\""
+        "Random Drink":
+            "Police officer" "\"What about the donuts? :C\""
+        "Random Drink":
+            "Police officer" "\"What about the donuts? :C\""
+        "Coffee and Sprinkle Donut":
+            "Police officer" "\"That's refreshing! Back to duty.\""
+
+label d3_continue2:
+    char_shin "\"Maybe police cliche stereotypes are true ..\""
+    "The bell would ring, a customer is here!"
+
+    #Karen order
+    "Karen" "\"You there! Are you finally taking my order?\""
+    char_shin "\"What can I get you?\""
+    "Karen" "\"About time, I want a pumpkin drink that is extra creamy and I DON'T want it cold. Make sure to make it extra drizzly and not just that, make sure it is a LARGE. Did you get all of that?\""
+    "Karen" "\"Oh and a bagel but like not normal bagel, give it some flavor.\""
+
+label d3_order3:
+    #Random drink tba
+    menu: 
+        "Random Drink":
+            "Karen" "\"Is this a joke? I demand to speak to your manager!\""
+        "Random Drink":
+            "Karen" "\"Is this a joke? I demand to speak to your manager!\""
+        "Extra Large Pumpkin spice latte with caramel drizzle and extra cream no ice and a raisin bagel":
+            "Karen" "\"I’ll be leaving a 4 star review. Your manager would be proud of that!\""
+        "Random Drink":
+            "Karen" "\"Is this a joke? I demand to speak to your manager!\""
+
+label d3_continue3:
+    char_shin "\"I am.. The manager..\""
+    "The bell would ring, a customer is here!"
+
+    #Office worker Lady order
+    "Office worker lady" "\"Hey, you!\""
+    char_shin "\"What can I get you?\""
+    "Office worker lady" "\"I need a drink for the boss, STAT. Something roasted but not too much.\""
+
+label d3_order4:
+    #Random drink tba
+    menu: 
+        "Random Drink":
+            "Office worker lady" "\"You must like your job if it’s to dissatisfy people.\""
+        "Random Drink":
+            "Office worker lady" "\"You must like your job if it’s to dissatisfy people.\""
+        "Random Drink":
+            "Office worker lady" "\"You must like your job if it’s to dissatisfy people.\""
+        "Light Roast":
+            "Office worker lady" "\"Good Job kid, maybe you’ll get a tip next time.\""
+
+label d3_continue4:
+    #Shift over
+    "You take a deep breath."
+    char_shin "\"What a day, time to close up now.\""
+
+    "You close up shop and head home."
+    "On your way home, you noticed a figure."
+    "It was the police officer from earlier."
+
+    #Police officer side convo
+    #Screen bg: Side street, evening.
+    #Sprite PNG: Nervous Shin.
+
+    "Police officer" "\"You there!\"" 
+    char_shin "\"Me????\""
+    "Police officer" "\"Have you noticed anything strange lately around these parts?\""
+    char_shin "\"Not that I can think of, sir…\""
+    "Police officer" "\"Well, please let me know if you do, people have gone missing, and I had to see one of them be you.\""
+    char_shin "\"Got it…\""
+    "Police officer" "\"Oh yeah, if you could, I would buy maybe 2 dozen of your donuts and send them to the station!\""
+    char_shin "\"Sure! I can do that.\""
+
+    "You wave the officer goodbye as he walks the other direction."
+    char_monologue "Strange.. I haven't seen Tariro in a while either.."
+    char_monologue "Maybe I should visit him tomorrow.."
+    "With that, you proceed to head home."
+    "You flop yourself on your bed."
+    "You sleep till the next day."
 
     return
